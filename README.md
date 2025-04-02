@@ -45,23 +45,24 @@ I went with an RTX 3090. It’s the cheapest, but still good.
 
 We’ll be renting a server via [vast.ai](https://cloud.vast.ai/?ref_id=124265). The process has a few gotchas, so let’s walk through it step by step.
 
-1. Go to the [site](https://cloud.vast.ai/?ref_id=124265) and create an account. (Yes, that’s a referral link from a shady friend.)
+1. Go to the [site](https://cloud.vast.ai/?ref_id=124265) and create an account. (Yes, that’s a referral link from a bad friend.)
 2. Go to the **Account** menu.
 3. On the right, click **ADD SSH KEY**, paste the key you generated earlier, and save.
 4. Head over to the **Templates** menu and select a preconfigured setup. We’re looking for the one called **Pytorch (Vast).** Click **Select.**
     
-    ![image.png](attachment:062d46fe-83f1-4ee9-949b-325b0a26b85e:image.png)
+    ![image](https://github.com/user-attachments/assets/a0d3935f-5db7-47ba-9517-6be58d448968)
+
     
 5. Now for the fun part — choosing a GPU.
 6. Go to the **Search** tab and set the filters at the top: `1x` and the name of the GPU you’re looking for.
     
-    ![](attachment:1a6c627d-ff70-4215-bbf7-398f2e356c95:Untitled.png)
-    
+    ![image](https://github.com/user-attachments/assets/0016c5c1-d064-4c31-b990-ecf97cb719a8)
+
 7. On the left, set disk space to 90GB.
 8. When choosing a GPU, make sure the internet speed is at least 300 Mbps.
     
-    ![](attachment:dd05153e-ed1b-4cc6-93e2-125193a73b56:Untitled.png)
-    
+    ![image](https://github.com/user-attachments/assets/b037f166-8726-4a8a-a411-de1972bde7a0)
+
 9. There's also a **Duration** parameter — it shows how long you can rent that specific card.
 10. Once you find a suitable GPU, click **Rent**.
 
@@ -72,8 +73,8 @@ We’ll be renting a server via [vast.ai](https://cloud.vast.ai/?ref_id=124265).
 3. Open PuttyGen again and copy your SSH key once more.
 4. Click the key icon on the right.
     
-    ![](attachment:dd68617b-51c6-4a0d-9a14-0898ecebd972:Untitled.png)
-    
+    ![image](https://github.com/user-attachments/assets/f32841f0-10e6-4f32-9450-8dd221492913)
+
 5. Paste your SSH key and click **ADD SSH KEY**. The window will close, and you’ll see a message saying **SSH KEY ADDED TO INSTANCE**.
 
 ---
@@ -84,11 +85,11 @@ Let’s walk through using Putty on Windows.
 
 1. Go back to the **Instances** tab on Vast.
     
-    ![](attachment:dd68617b-51c6-4a0d-9a14-0898ecebd972:Untitled.png)
+    ![image](https://github.com/user-attachments/assets/1e6cb476-d26d-4bc9-8c44-95fab4bf9f5a)
     
 2. Copy the address in the format `root@185.150.27.254`.
     
-    ![](attachment:79ce901c-d1bc-42bf-91b1-7f3e7015c597:Untitled.png)
+    ![image](https://github.com/user-attachments/assets/4ff86c07-a1c6-41d2-9083-6d3328ba2bd7)
     
 3. Open Putty and paste the address into the **Host Name** field.
 4. Go back to Vast and copy the **port number** listed **before** the IP you just copied.
@@ -96,13 +97,12 @@ Let’s walk through using Putty on Windows.
 6. In Putty, expand the **SSH** section on the left, then go to **Auth → Credentials**.
 7. In the **Private key file** field, select your saved key file.
     
-    ![](attachment:d8ea4664-df06-4489-a547-01a043aa2523:Untitled.png)
+    ![image](https://github.com/user-attachments/assets/bf09d27b-f742-4044-b561-6d29d9f25426)
     
 8. Go back to the **Session** tab and click **Save** to store your session settings.
 9. Click **Open** — if everything is configured correctly, your server will boot up.
     
-    ![](attachment:c22d6386-bbcb-45b0-ab3c-3c43bc3e6a75:Untitled.png)
-    
+    ![image](https://github.com/user-attachments/assets/29f50937-90db-4d1d-8624-27bca13cfeed)
     Good evening :)
 
 ---
@@ -146,7 +146,7 @@ To log in, you’ll need to set up port forwarding. We'll use Putty so you don�
    - Source port: `3000`
    - Destination: `localhost:3000`
    - Click `Add`
-     ![image.png](attachment:aa61d6bd-afbc-4d85-b570-65fa1a1932e4:image.png)
+     ![image](https://github.com/user-attachments/assets/6956b7e0-0442-4d78-88be-9d2a2481211a)
 5. Go back to **Session** and click **Save**.
 6. Start the terminal by double-clicking the session name or pressing **Open**.
 7. You should see logs like: `Waiting for userData.json to be created…`
@@ -162,7 +162,7 @@ INFO:hivemind_exp.trainer.hivemind_grpo_trainer:rabid amphibious donkey
 ```
 2. In this example, the node name is rabid amphibious donkey.
 3. Go to the [dashboard](https://dashboard.gensyn.ai/) and search for your node by name.
-
+![image](https://github.com/user-attachments/assets/e3962507-dc15-46eb-a5c1-9a0a92fe59d7)
 > 💡 Only top 100 nodes are listed.
 
 ---
