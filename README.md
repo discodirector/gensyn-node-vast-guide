@@ -15,8 +15,6 @@ Points are awarded for successfully completed computations. There’s a leaderbo
 
 Leaderboard link — https://dashboard.gensyn.ai/
 
-- ![image](https://github.com/user-attachments/assets/1cd822cf-7eda-4fe5-bd4b-5314f9dc8d0c)
-
 Clearly, this testnet offers rewards — but it’s also resource-intensive. Renting a GPU server will cost anywhere between $140 to $300 per month.
 
 **Recommended hardware** — as mentioned earlier, the only real limitation is your budget. The better the hardware, the higher your rewards.
