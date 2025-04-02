@@ -113,24 +113,43 @@ Let’s walk through using Putty on Windows.
 - Right-click - paste
 - Highlighting text - copy from terminal.
   
+
+**1. Clone the repository and navigate into it:**
 ```sh
 git clone https://github.com/gensyn-ai/rl-swarm.git
 cd rl-swarm
+```
 
+**2. Update packages and install Python dependencies:**
+```sh
 sudo apt update
 sudo apt install -y python3 python3-pip python3-venv git
+```
 
+**3. Create and activate a Python virtual environment:**
+```sh
 python3 -m venv .venv
 source .venv/bin/activate
+```
 
+**4. Upgrade pip and install Node.js tools:**
+```sh
 pip install --upgrade pip
 sudo apt install -y npm
 sudo npm install -g yarn n
 sudo n lts
-node -v
+```
 
+**5. Check Node.js version:**
+```sh
+node -v
+```
+
+**6. Run the node setup script:**
+```sh
 ./run_rl_swarm.sh
 ```
+
 > 💡 You can create an account on Hugging Face and use your own access token. Also you can decline Hugging Face Club prompt and use public access. But in the future, you may face the problem of exceeding the limits.
 
 ---
