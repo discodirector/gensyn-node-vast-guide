@@ -8,17 +8,20 @@ Gensyn is an L1 blockchain purpose-built for deep learning computation. It allow
 - Docs: [rl-swarm](https://github.com/gensyn-ai/rl-swarm)
 - Dashboard: [dashboard.gensyn.ai](https://dashboard.gensyn.ai)
 
-> 💡 You earn points for completed computations. GPU = faster rewards.
+- ![image](https://github.com/user-attachments/assets/1cd822cf-7eda-4fe5-bd4b-5314f9dc8d0c)
 
----
+## What’s happening?
+The testnet launched a few days ago. During this phase, you can contribute compute power. Nodes can be deployed on CPU servers or GPU servers. If you choose GPU, you’ll earn points significantly faster.
 
-## Optional: Running Node on Windows PC
-If you're not renting a server:
-```sh
-wsl --install
-```
-Follow [Microsoftʼs guide](https://learn.microsoft.com/en-us/windows/wsl/install).
+Points are awarded for successfully completed computations. There’s a leaderboard where you can check the number of participants and find yourself.
 
+Leaderboard link — https://dashboard.gensyn.ai/
+
+![image.png](attachment:55ad82bf-4f0f-4906-bfbb-75b43927d50e:image.png)
+
+Clearly, this testnet offers rewards — but it’s also resource-intensive. Renting a GPU server will cost anywhere between $140 to $300 per month.
+
+Such testnets usually pay off and can generate solid profits.
 ---
 
 ## Renting a Server (Vast.ai)
@@ -30,28 +33,91 @@ Follow [Microsoftʼs guide](https://learn.microsoft.com/en-us/windows/wsl/instal
    - Disk: ≥90GB
    - Internet speed: ≥300 Mbps
 5. Click `Rent`
-
+I went with an RTX 3090. It’s the cheapest, but still good.
 ---
 
 ## Installing PuTTY
 1. Download from [official site](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
-2. Open `PuttyGen`, click `Generate`, move mouse
-3. Save the private key, copy the public key
+2. Choose the version that fits your system and install it.
+3. You’ll get two programs: the terminal (Putty) and PuttyGen.
+4. Launch PuttyGen, make sure **RSA** is selected at the bottom, then click **Generate**.
+5. Move your mouse around in the blank field to generate a unique key.
+6. Once it finishes, your key will appear in the "Key" field. Highlight and copy it.
+7. Click Save Private Key, but don’t close the program yet. Remember where you saved the file — you’ll need it later.
+
+---
+## Renting the Server
+
+We’ll be renting a server via [vast.ai](https://cloud.vast.ai/?ref_id=124265). The process has a few gotchas, so let’s walk through it step by step.
+
+1. Go to the [site](https://cloud.vast.ai/?ref_id=124265) and create an account. (Yes, that’s a referral link from a shady friend.)
+2. Go to the **Account** menu.
+3. On the right, click **ADD SSH KEY**, paste the key you generated earlier, and save.
+4. Head over to the **Templates** menu and select a preconfigured setup. We’re looking for the one called **Pytorch (Vast).** Click **Select.**
+    
+    ![image.png](attachment:062d46fe-83f1-4ee9-949b-325b0a26b85e:image.png)
+    
+5. Now for the fun part — choosing a GPU.
+6. Go to the **Search** tab and set the filters at the top: `1x` and the name of the GPU you’re looking for.
+    
+    ![](attachment:1a6c627d-ff70-4215-bbf7-398f2e356c95:Untitled.png)
+    
+7. On the left, set disk space to 90GB.
+8. When choosing a GPU, make sure the internet speed is at least 300 Mbps.
+    
+    ![](attachment:dd05153e-ed1b-4cc6-93e2-125193a73b56:Untitled.png)
+    
+9. There's also a **Duration** parameter — it shows how long you can rent that specific card.
+10. Once you find a suitable GPU, click **Rent**.
+
+### Setting Up the Server for Access
+
+1. Once you’ve rented the server, go to the **Instances** tab.
+2. You’ll see a list of your active servers.
+3. Open PuttyGen again and copy your SSH key once more.
+4. Click the key icon on the right.
+    
+    ![](attachment:dd68617b-51c6-4a0d-9a14-0898ecebd972:Untitled.png)
+    
+5. Paste your SSH key and click **ADD SSH KEY**. The window will close, and you’ll see a message saying **SSH KEY ADDED TO INSTANCE**.
 
 ---
 
-## Setting Up Server Access
-1. Go to **Instances** on Vast
-2. Add your SSH key to the instance
-3. Open PuTTY:
-   - Host Name: `root@<server-ip>`
-   - Port: `<port-number>`
-   - SSH > Auth > Credentials: load your private key file
-4. Save the session, then `Open`
+### Logging into the Server
+
+Let’s walk through using Putty on Windows.
+
+1. Go back to the **Instances** tab on Vast.
+    
+    ![](attachment:dd68617b-51c6-4a0d-9a14-0898ecebd972:Untitled.png)
+    
+2. Copy the address in the format `root@185.150.27.254`.
+    
+    ![](attachment:79ce901c-d1bc-42bf-91b1-7f3e7015c597:Untitled.png)
+    
+3. Open Putty and paste the address into the **Host Name** field.
+4. Go back to Vast and copy the **port number** listed **before** the IP you just copied.
+5. Paste that number into Putty’s **Port** field.
+6. In Putty, expand the **SSH** section on the left, then go to **Auth → Credentials**.
+7. In the **Private key file** field, select your saved key file.
+    
+    ![](attachment:d8ea4664-df06-4489-a547-01a043aa2523:Untitled.png)
+    
+8. Go back to the **Session** tab and click **Save** to store your session settings.
+9. Click **Open** — if everything is configured correctly, your server will boot up.
+    
+    ![](attachment:c22d6386-bbcb-45b0-ab3c-3c43bc3e6a75:Untitled.png)
+    
+    Good evening :)
 
 ---
 
 ## Setting Up the Node
+
+> 💡 Forget CTRL + C and CTRL + V - they don't work here.
+- Right-click - paste
+- Highlighting text - copy from terminal.
+  
 ```sh
 git clone https://github.com/gensyn-ai/rl-swarm.git
 cd rl-swarm
@@ -70,31 +136,37 @@ node -v
 
 ./run_rl_swarm.sh
 ```
-> 💡 Decline Hugging Face Club prompt.
+> 💡 You can create an account on Hugging Face and use your own access token. Also you can decline Hugging Face Club prompt and use public access. But in the future, you may face the problem of exceeding the limits.
 
 ---
 
-## Accessing the Dashboard
-To access the web dashboard locally:
-1. Open PuTTY
-2. Load your session → SSH > Tunnels
+## Logging into the Dashboard and Finalizing Setup
+
+To log in, you’ll need to set up port forwarding. We'll use Putty so you don’t have to save your key in a separate file again.
+
+1. **Close the terminal** by pressing **Ctrl + B**, then **D**. Open a new Putty session.
+2. Load the saved session you created earlier.
+3. On the left, go to **Connection → SSH → Tunnels**.
+4. Enter the following:
    - Source port: `3000`
    - Destination: `localhost:3000`
-   - Click `Add`, then `Save`
-3. Start the session, go to:
-   - [http://localhost:3000](http://localhost:3000)
-4. Log in with Google (Alchemy used under the hood)
-
-> 💡 For multiple nodes, log out of each before switching accounts.
-
+   - Click `Add`
+     ![image.png](attachment:aa61d6bd-afbc-4d85-b570-65fa1a1932e4:image.png)
+5. Go back to **Session** and click **Save**.
+6. Start the terminal by double-clicking the session name or pressing **Open**.
+7. You should see logs like: `Waiting for userData.json to be created…`
+8. Go to [http://localhost:3000](http://localhost:3000/)
+9. You should see a login screen. Sign in using your Google account. The process goes through [Alchemy](https://www.alchemy.com/).
+10. Once you’ve logged in, the logs should update and your node should start running.
 ---
 
 ## Finding Yourself on the Leaderboard
-1. Check logs for your node name:
+1. In your logs, find the name of your node. It should look like this:
 ```
 INFO:hivemind_exp.trainer.hivemind_grpo_trainer:rabid amphibious donkey
 ```
-2. Go to [dashboard.gensyn.ai](https://dashboard.gensyn.ai) and search by name
+2. In this example, the node name is rabid amphibious donkey.
+3. Go to the [dashboard](https://dashboard.gensyn.ai/) and search for your node by name.
 
 > 💡 Only top 100 nodes are listed.
 
@@ -117,13 +189,31 @@ ls            # list files
 pwd           # show current path
 ```
 
+### Node Update
+
+1. Make sure you're in the **/rl-swarm** directory
+2. Run the command: **git pull**
+
+### Troubleshooting
+
+**Error:**
+
+```jsx
+Many Requests for url: https://huggingface.co/Gensyn/Qwen2.5-0.5B-Instruct/resolve/main/sentence_bert_config.json
+```
+
+This is a temporary rate limit issue from Hugging Face. It usually lasts for about 1 hour.
+
+**Solution:**
+
+1. Register an account [here](https://huggingface.co/settings/tokens)
+2. Create your own access token — it has higher rate limits and should prevent this issue
+3. When launching the node and you're prompted about Hugging Face Hub, press `Y` and paste your token
 ---
 
 ## Final Notes
 - Renting a GPU server costs $140–$300/month
 - Your points depend on hardware quality
-- Testnet is live — good opportunity to earn rewards!
+- Testnet is live — good opportunity to earn rewards
 
 ---
-
-Made with 💻 by [Your Name] | Inspired by Moni's Discover
