@@ -8,8 +8,6 @@ Gensyn is an L1 blockchain purpose-built for deep learning computation. It allow
 - Docs: [rl-swarm](https://github.com/gensyn-ai/rl-swarm)
 - Dashboard: [dashboard.gensyn.ai](https://dashboard.gensyn.ai)
 
-- ![image](https://github.com/user-attachments/assets/1cd822cf-7eda-4fe5-bd4b-5314f9dc8d0c)
-
 ## What’s happening?
 The testnet launched a few days ago. During this phase, you can contribute compute power. Nodes can be deployed on CPU servers or GPU servers. If you choose GPU, you’ll earn points significantly faster.
 
@@ -17,23 +15,20 @@ Points are awarded for successfully completed computations. There’s a leaderbo
 
 Leaderboard link — https://dashboard.gensyn.ai/
 
-![image.png](attachment:55ad82bf-4f0f-4906-bfbb-75b43927d50e:image.png)
+- ![image](https://github.com/user-attachments/assets/1cd822cf-7eda-4fe5-bd4b-5314f9dc8d0c)
 
 Clearly, this testnet offers rewards — but it’s also resource-intensive. Renting a GPU server will cost anywhere between $140 to $300 per month.
 
-Such testnets usually pay off and can generate solid profits.
----
-
-## Renting a Server (Vast.ai)
-1. Go to [Vast.ai](https://cloud.vast.ai/?ref_id=124265) and create an account
-2. Add SSH key in **Account** → `ADD SSH KEY`
-3. Choose a **Pytorch (Vast)** template
-4. Set filters:
-   - GPU: 1x RTX 3090 / 4090 / A100 / H100
-   - Disk: ≥90GB
-   - Internet speed: ≥300 Mbps
-5. Click `Rent`
+**Recommended hardware** — as mentioned earlier, the only real limitation is your budget. The better the hardware, the higher your rewards.
+**For servers without a GPU:**
+- arm64 or x86 CPU with at least 16GB RAM
+**For GPU servers:**
+- RTX 3090
+- RTX 4090
+- A100
+- H100
 I went with an RTX 3090. It’s the cheapest, but still good.
+
 ---
 
 ## Installing PuTTY
