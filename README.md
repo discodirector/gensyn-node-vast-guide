@@ -29,6 +29,7 @@ Clearly, this testnet offers rewards — but it’s also resource-intensive. Ren
 - RTX 4090
 - A100
 - H100
+
 I went with an RTX 3090. It’s the cheapest, but still good.
 
 ---
