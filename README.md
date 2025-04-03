@@ -19,8 +19,11 @@ Clearly, this testnet offers rewards — but it’s also resource-intensive. Ren
 
 **Recommended hardware** — as mentioned earlier, the only real limitation is your budget. The better the hardware, the higher your rewards.
 **For servers without a GPU:**
+
 - arm64 or x86 CPU with at least 16GB RAM
+  
 **For GPU servers:**
+
 - RTX 3090
 - RTX 4090
 - A100
