@@ -15,7 +15,7 @@ Points are awarded for successfully completed computations. There’s a leaderbo
 
 Leaderboard link — https://dashboard.gensyn.ai/
 
-Clearly, this testnet offers rewards — but it’s also resource-intensive. Renting a GPU server will cost anywhere between $140 to $300 per month.
+Clearly, this testnet offers rewards — but it’s also resource-intensive. Renting a GPU server will cost anywhere between $90 to $300 per month.
 
 **Recommended hardware** — as mentioned earlier, the only real limitation is your budget. The better the hardware, the higher your rewards.
 
@@ -25,12 +25,12 @@ Clearly, this testnet offers rewards — but it’s also resource-intensive. Ren
   
 **For GPU servers:**
 
-- RTX 3090
+- RTX 3060 — 4090 (MORE THAN 12 GB VRAM)
 - RTX 4090
 - A100
 - H100
 
-I went with an RTX 3090. It’s the cheapest, but still good.
+I went with an RTX 3060 Ti (16 gb VRAM), 3090 (24 gb VRAM) and 5060 Ti (16 gb VRAM)
 
 ---
 
@@ -139,7 +139,8 @@ source .venv/bin/activate
 ```sh
 pip install --upgrade pip
 sudo apt install -y npm
-sudo npm install -g yarn n
+sudo npm install -g yarn
+sudo npm install -g n
 sudo n lts
 ```
 
@@ -213,7 +214,7 @@ pwd           # show current path
 
 ### Troubleshooting
 
-**Error:**
+**Error №1:**
 
 ```jsx
 Many Requests for url: https://huggingface.co/Gensyn/Qwen2.5-0.5B-Instruct/resolve/main/sentence_bert_config.json
@@ -228,8 +229,22 @@ This is a temporary rate limit issue from Hugging Face. It usually lasts for abo
 3. When launching the node and you're prompted about Hugging Face Hub, press `Y` and paste your token
 ---
 
+**Error №2:**
+
+```jsx
+HTTPError('500 Server Error…..
+```
+Restart the node until it starts.
+
+**Solution:**
+
+1. Register an account [here](https://huggingface.co/settings/tokens)
+2. Create your own access token — it has higher rate limits and should prevent this issue
+3. When launching the node and you're prompted about Hugging Face Hub, press `Y` and paste your token
+---
+
 ## Final Notes
-- Renting a GPU server costs $140–$300/month
+- Renting a GPU server costs $60–$400/month
 - Your points depend on hardware quality
 - Testnet is live — good opportunity to earn rewards
 
