@@ -211,6 +211,32 @@ pwd           # show current path
 1. Make sure you're in the **/rl-swarm** directory
 2. Run the command: **git pull**
 
+### Creating a Backup
+
+We’ll need this in order to restore the node on another machine.
+
+You need to save 1 files:
+
+- `swarm.pem.file`
+
+**File paths:**
+
+- `/workspace/rl-swarm/swarm.pem`
+
+To upload or download these files, the easiest way is to use a different terminal like **MobaXterm** or **Termius** — they come with a built-in file explorer.
+
+**We’ll be using MobaXterm**
+
+1. Download the terminal from the official website — https://mobaxterm.mobatek.net/
+2. Open it and create a new session under the **Sessions** tab.
+3. Select **SSH** as the connection type.
+4. **Remote host** — your server's IP address or domain.
+5. Check **"Specify username"** and enter your login (usually `root`).
+6. Find the **"Use private key"** option and select your `.ppk` file.
+7. After that, you should be able to connect to your server.
+
+Once connected, you should see all your server’s folders and files on the left panel. Locate the necessary files and right-click to download them.
+
 ### Troubleshooting
 
 **Error №1:**
