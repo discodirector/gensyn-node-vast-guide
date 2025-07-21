@@ -9,7 +9,7 @@ Gensyn is an L1 blockchain purpose-built for deep learning computation. It allow
 - Dashboard: [dashboard.gensyn.ai](https://dashboard.gensyn.ai)
 
 ## What’s happening?
-The testnet launched a few days ago. During this phase, you can contribute compute power. Nodes can be deployed on CPU servers or GPU servers. If you choose GPU, you’ll earn points significantly faster.
+During this phase, you can contribute compute power. Nodes can be deployed on CPU servers or GPU servers. If you choose GPU, you’ll earn points significantly faster.
 
 Points are awarded for successfully completed computations. There’s a leaderboard where you can check the number of participants and find yourself.
 
@@ -152,6 +152,25 @@ node -v
 ```sh
 ./run_rl_swarm.sh
 ```
+**7. Hugging face token and choosing the model**
+
+You’ll see a prompt in the console asking if you want to add your model to the Hugging Face Club — you can skip this step for now. Later, it's recommended to create an account and generate your own token (it's free). You’ll find the instructions below. The token can be added after restarting.
+
+Next, you’ll need to choose a model — just copy and paste one from the list below:
+
+   * `Gensyn/Qwen2.5-0.5B-Instruct`
+   * `Qwen/Qwen3-0.6B`
+   * `nvidia/AceInstruct-1.5B`
+   * `dnotitia/Smoothie-Qwen3-1.7B`
+   * `Gensyn/Qwen2.5-1.5B-Instruct`
+
+**How to choose a model?**
+
+For GPUs with up to 16 GB of memory — choose the first or second model.
+
+For GPUs with 24 GB or more — go with the third or fifth model.
+
+
 
 > 💡 You can create an account on Hugging Face and use your own access token. Also you can decline Hugging Face Club prompt and use public access. But in the future, you may face the problem of exceeding the limits.
 
