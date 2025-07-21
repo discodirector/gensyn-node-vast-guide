@@ -25,8 +25,7 @@ Clearly, this testnet offers rewards — but it’s also resource-intensive. Ren
   
 **For GPU servers:**
 
-- RTX 3060 — 4090 (MORE THAN 12 GB VRAM)
-- RTX 4090
+- RTX 3060 — 4090 (>12 GB VRAM is required)
 - A100
 - H100
 
