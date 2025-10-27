@@ -217,7 +217,7 @@ Even if you don’t plan to run additional nodes, optimizing VRAM is still a goo
 
 ### Optimizing VRAM usage
 
-First install the MobaXterm terminal to make your life easier. I explained how to do this [here](https://www.notion.so/1c7ec23807128039b6e3c0b621ad6cb9?pvs=21).
+First install the MobaXterm terminal to make your life easier. I explained how to do this [here](https://github.com/discodirector/gensyn-node-vast-guide/blob/main/README.md#creating-a-backup).
 
 After you’ve installed the terminal and connected, go to the server’s file system and find the files at the paths below:
 
@@ -289,7 +289,8 @@ If you already have a node running and you still haven’t received the role, he
 
 ### Getting the Block role
 
-![image.png](attachment:fa436ac9-768a-4a40-ab12-ea8cc2032bff:image.png)
+<img width="680" height="333" alt="image" src="https://github.com/user-attachments/assets/4a4b750c-8274-42c5-a4e2-db0145b20c39" />
+
 
 BlockAssist is an AI bot that learns from you in Minecraft. It starts out inexperienced but gets smarter as you play.
 
@@ -299,17 +300,17 @@ The simplest way to get the role is to use the OctaSpace service. The guys simpl
 2. Connect your wallet, top up the balance with stablecoins USDC, USDT on the BSC or Ethereum networks. You literally need a couple of dollars.
 3. Enter Block Assist in the search and select it.
     
-    ![image.png](attachment:51522386-70a4-49e8-a092-47d78f37a536:image.png)
+<img width="2048" height="489" alt="image" src="https://github.com/user-attachments/assets/758f172d-ca27-45fb-ba46-a5da959b0c54" />
     
 4. Now you need to choose a machine; focus on the green numbers — the higher they are, the more reliable the server. I decided not to skimp and took a 4090 for 25 cents an hour.
 5. Click on the server; it will light up. After that, go back to the top of the page and click **Confige**.
 6. You only need to enter HF_TOKEN as in the screenshot below and click Deploy at the top right.
     
-    ![image.png](attachment:b7c01532-3f8e-4cfa-a2b0-0776d89efa22:image.png)
+<img width="755" height="163" alt="image" src="https://github.com/user-attachments/assets/262fdede-0a13-4051-8cfb-71ed76ec2d06" />
     
 7. Next, follow this video guide.
     
-    https://video.twimg.com/amplify_video/1954676529885036545/vid/avc1/2560x1306/I8TqTO4MhZSA5ZAA.mp4?tag=21
+https://x.com/octa_space/status/1953158105660813364
     
 8. After you log into the server, you’ll see the desktop. Launch **Gensyn AI Block Assist** — a console window will open. Don’t press anything. A browser will automatically launch; sign in using your email. Two Minecraft windows will open automatically — wait until both reach the main menu.
 9. Once both windows are open, return to the console and press **Enter** (you may need to press it a few times). The game will start in both windows.
@@ -319,11 +320,11 @@ The simplest way to get the role is to use the OctaSpace service. The guys simpl
 13. When the construction is finished, the progress bar will be around **98%**.
 14. Go back to the console and press **Enter** (you may need to press it a few times).
     
-    ![image.png](attachment:a853e71a-2fca-4604-a84c-1eb2e3a73d0d:image.png)
+<img width="2048" height="1418" alt="image" src="https://github.com/user-attachments/assets/a96e503e-5757-4eec-9053-d321ba02c483" />
     
 16. After loading you can shut down the server, and after that all that’s left is to keep an eye on the Discord for the role opening in the link-for-access channel.
     
-    ![image.png](attachment:e8114b64-27ee-459b-98a4-c40da1ac8dab:image.png)
+<img width="1181" height="1030" alt="image" src="https://github.com/user-attachments/assets/9ce05121-9175-47cc-83e4-0f1f86f83677" />
 
 ### Node Update
 
